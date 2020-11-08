@@ -5,6 +5,7 @@ date: 2020-08-02
 tags: version-control
 categories: machine-learning
 excerpt_separator: <!--more-->
+comments: true
 ---
 ![Photo by Hani Bdran on Unsplash](/images/version_control_ml_1.jpg)
 
