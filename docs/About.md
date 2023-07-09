@@ -1,7 +1,5 @@
 # About
 
-## Who am I?
-
 My name is Romee. Welcome to my blog, where the fusion of data science and software engineering meets a passion for problem-solving and the joy of teaching. I'm delighted to have you join me on this invigorating journey through the realms of technology, where insight and innovation are our guiding stars.
 
 With over 7 years of experience as a data scientist and a background in software engineering, I have had the incredible opportunity to witness the remarkable evolution of these fields firsthand. From my early days crafting code as a software engineer, I realized my love for tackling complex challenges and unravelling solutions. This fascination led me to dive deeper into the world of data science, where I discovered a powerful avenue for exploring the mysteries hidden within vast datasets.

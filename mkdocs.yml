@@ -1,11 +1,14 @@
 site_name: Romee's Blog
 theme:
   name: material
+  logo: assets/icons/logo.png
+  favicon: assets/icons/favicon.png
   features:
+    - navigation.instant
     - navigation.tabs
-    - navigation.sections
-    - toc.integrate
     - navigation.top
+    - navigation.indexes
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -18,22 +21,37 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       primary: default
-      accent: purple
+      accent: black
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode    
-      primary: teal
-      accent: lime
+      primary: default
+      accent: default
+
+nav:
+  - Home: 'index.md'
+  - Technology:
+    - technology/index.md
+    - Bias Variance Trade-off: 'technology/bias-variance-trade-off.md'
+  - Finance:
+    - finance/index.md
+  - About: 'About.md'
+
+plugins:
 
 extra:
   social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/romitheguru
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/romitheguru
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/romitheguru/
+      name: Romee Panchal on LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@romeepanchal
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/romitheguru
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/romitheguru
+  generator: false
 
 markdown_extensions:
   - pymdownx.highlight:
