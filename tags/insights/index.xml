@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Insights on Romee&#39;s Blog</title>
-    <link>http://localhost:1313/tags/insights/</link>
+    <link>https://romitheguru.github.io/tags/insights/</link>
     <description>Recent content in Insights on Romee&#39;s Blog</description>
     <generator>Hugo -- 0.126.1</generator>
     <language>en</language>
     <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/insights/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://romitheguru.github.io/tags/insights/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Find Insights in Data</title>
-      <link>http://localhost:1313/posts/how_find_insights/</link>
+      <link>https://romitheguru.github.io/posts/how_find_insights/</link>
       <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how_find_insights/</guid>
+      <guid>https://romitheguru.github.io/posts/how_find_insights/</guid>
       <description>In today&amp;rsquo;s data-driven world, businesses hold a treasure trove of information. But simply having data isn&amp;rsquo;t enough. The true power lies in extracting valuable insights to inform better decision-making and fuel growth. This article will guide you through a strategic approach to uncover hidden gems within your data.
 What are Insights? Insights are not just random observations; they are previously unknown, actionable business trends or knowledge. They provide a deeper understanding of your customers, market dynamics, or internal operations, empowering you to take strategic actions.</description>
     </item>
