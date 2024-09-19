@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Learning on Romee&#39;s Blog</title>
+    <link>https://romitheguru.github.io/tags/learning/</link>
+    <description>Recent content in Learning on Romee&#39;s Blog</description>
+    <generator>Hugo -- 0.126.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://romitheguru.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond Memorisation: How Summaries Build Deeper Understanding</title>
+      <link>https://romitheguru.github.io/posts/general/learning_through_summarisation/</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/posts/general/learning_through_summarisation/</guid>
+      <description>Today, the internet is flooded with information. It isn&amp;rsquo;t easy to keep up with everything happening in the field. However, to be successful you have to keep yourself informed. The problem is you can only read some things due to time constraints. So, it becomes crucial that whatever little time you spend in consuming information you make the best out of it. But how can you do that? How can you understand and retain most of the information that you read?</description>
+    </item>
+  </channel>
+</rss>
