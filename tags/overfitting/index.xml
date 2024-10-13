@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Overfitting on Romee&#39;s Blog</title>
+    <link>https://romitheguru.github.io/tags/overfitting/</link>
+    <description>Recent content in Overfitting on Romee&#39;s Blog</description>
+    <generator>Hugo -- 0.126.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://romitheguru.github.io/tags/overfitting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bias Variance Trade-off</title>
+      <link>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</guid>
+      <description>The bias-variance trade-off is a fundamental concept in machine learning that refers to the trade-off between the ability of a model to fit the training data well (low bias) and its ability to generalize to new, unseen data (low variance). In other words, the bias-variance trade-off is the balance between the complexity and flexibility of a model, and its ability to make accurate predictions on both the training and testing datasets.</description>
+    </item>
+  </channel>
+</rss>

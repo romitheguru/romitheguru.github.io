@@ -31,6 +31,13 @@ But why am I writing about this? I think, when life goes smoothly, we rarely que
       <description>Today, the internet is flooded with information. It isn&amp;rsquo;t easy to keep up with everything happening in the field. However, to be successful you have to keep yourself informed. The problem is you can only read some things due to time constraints. So, it becomes crucial that whatever little time you spend in consuming information you make the best out of it. But how can you do that? How can you understand and retain most of the information that you read?</description>
     </item>
     <item>
+      <title>Bias Variance Trade-off</title>
+      <link>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</guid>
+      <description>The bias-variance trade-off is a fundamental concept in machine learning that refers to the trade-off between the ability of a model to fit the training data well (low bias) and its ability to generalize to new, unseen data (low variance). In other words, the bias-variance trade-off is the balance between the complexity and flexibility of a model, and its ability to make accurate predictions on both the training and testing datasets.</description>
+    </item>
+    <item>
       <title>A Step-by-Step Guide to Securing a Data Science Job</title>
       <link>https://romitheguru.github.io/posts/how_get_data_job/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>

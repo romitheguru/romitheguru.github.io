@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://romitheguru.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bias Variance Trade-off</title>
+      <link>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</guid>
+      <description>The bias-variance trade-off is a fundamental concept in machine learning that refers to the trade-off between the ability of a model to fit the training data well (low bias) and its ability to generalize to new, unseen data (low variance). In other words, the bias-variance trade-off is the balance between the complexity and flexibility of a model, and its ability to make accurate predictions on both the training and testing datasets.</description>
+    </item>
+    <item>
       <title>A Step-by-Step Guide to Securing a Data Science Job</title>
       <link>https://romitheguru.github.io/posts/how_get_data_job/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
