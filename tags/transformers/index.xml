@@ -4,7 +4,7 @@
     <title>Transformers on Romee&#39;s Blog</title>
     <link>https://romitheguru.github.io/tags/transformers/</link>
     <description>Recent content in Transformers on Romee&#39;s Blog</description>
-    <generator>Hugo -- 0.126.1</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en</language>
     <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://romitheguru.github.io/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <link>https://romitheguru.github.io/posts/deep_learning/learning_path/</link>
       <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/deep_learning/learning_path/</guid>
-      <description>Are you fascinated by deep learning&amp;rsquo;s transformative power but unsure how to navigate the journey from logistic regression to mastering transformer architectures? You’re not alone. Transformers are the backbone of modern AI, power innovations in natural language processing, computer vision, and beyond, but getting there can feel daunting.
-In this blog, I outline a structured, week-by-week learning path that takes you from the foundational concepts of machine learning to building and fine-tuning your transformer models.</description>
+      <description>&lt;p&gt;Are you fascinated by deep learning&amp;rsquo;s transformative power but unsure how to navigate the journey from logistic regression to mastering transformer architectures? You’re not alone. Transformers are the backbone of modern AI, power innovations in natural language processing, computer vision, and beyond, but getting there can feel daunting.&lt;/p&gt;
+&lt;p&gt;In this blog, I outline a structured, week-by-week learning path that takes you from the foundational concepts of machine learning to building and fine-tuning your transformer models. Whether you&amp;rsquo;re a beginner or looking to deepen your expertise, this roadmap combines key concepts, curated resources, hands-on projects, and practical tips to make your progress achievable and rewarding.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

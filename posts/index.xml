@@ -4,7 +4,7 @@
     <title>Posts on Romee&#39;s Blog</title>
     <link>https://romitheguru.github.io/posts/</link>
     <description>Recent content in Posts on Romee&#39;s Blog</description>
-    <generator>Hugo -- 0.126.1</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en</language>
     <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://romitheguru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,32 +13,33 @@
       <link>https://romitheguru.github.io/posts/deep_learning/learning_path/</link>
       <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/deep_learning/learning_path/</guid>
-      <description>Are you fascinated by deep learning&amp;rsquo;s transformative power but unsure how to navigate the journey from logistic regression to mastering transformer architectures? You’re not alone. Transformers are the backbone of modern AI, power innovations in natural language processing, computer vision, and beyond, but getting there can feel daunting.
-In this blog, I outline a structured, week-by-week learning path that takes you from the foundational concepts of machine learning to building and fine-tuning your transformer models.</description>
+      <description>&lt;p&gt;Are you fascinated by deep learning&amp;rsquo;s transformative power but unsure how to navigate the journey from logistic regression to mastering transformer architectures? You’re not alone. Transformers are the backbone of modern AI, power innovations in natural language processing, computer vision, and beyond, but getting there can feel daunting.&lt;/p&gt;
+&lt;p&gt;In this blog, I outline a structured, week-by-week learning path that takes you from the foundational concepts of machine learning to building and fine-tuning your transformer models. Whether you&amp;rsquo;re a beginner or looking to deepen your expertise, this roadmap combines key concepts, curated resources, hands-on projects, and practical tips to make your progress achievable and rewarding.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Learning on Your Own: Challenges, Failures, and Successes</title>
       <link>https://romitheguru.github.io/posts/life/learnings/self_study_experience/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/life/learnings/self_study_experience/</guid>
-      <description>This world is full of ambitious people who are lifelong learners. They pursue knowledge even while managing careers or businesses, whether to satisfy their curiosity or to enhance their skills.
-I am a lifelong learner, though perhaps not among the highly ambitious. Learning is my passion - I&amp;rsquo;m drawn to newer technologies and understanding more about the world. I am a full-time machine learning engineer. If you follow AI news, you know a lot is happening in this field.</description>
+      <description>&lt;p&gt;This world is full of ambitious people who are lifelong learners. They pursue knowledge even while managing careers or businesses, whether to satisfy their curiosity or to enhance their skills.&lt;/p&gt;
+&lt;p&gt;I am a lifelong learner, though perhaps not among the highly ambitious. Learning is my passion - I&amp;rsquo;m drawn to newer technologies and understanding more about the world. I am a full-time machine learning engineer. If you follow AI news, you know a lot is happening in this field. Even keeping up with a single sub-field is challenging. Yet, I consistently try to learn about new methods and technologies that could create value in my work. To do so I need to find a dedicated time to self-study. In this post, I will share my experience with self-learning.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Magic of Habits</title>
       <link>https://romitheguru.github.io/posts/life/magic_of_habits/</link>
       <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/life/magic_of_habits/</guid>
-      <description>Our habits shape us. Some habits can make us productive, others can drag us and won’t let us achieve anything. That is why it is important that we don’t let our bad habits hold us back in life.
-Why do we have habits? Human brain is an incredibly complex evolved machine. It tries to optimize processes to keep everything running smoothly. When we attempt to do a new task, it takes a lot of our attention, and thus, require a lot of brain power.</description>
+      <description>&lt;p&gt;Our habits shape us. Some habits can make us productive, others can drag us and won’t let us achieve anything. That is why it is important that we don’t let our bad habits hold us back in life.&lt;/p&gt;
+&lt;h3 id=&#34;why-do-we-have-habits&#34;&gt;Why do we have habits?&lt;/h3&gt;
+&lt;p&gt;Human brain is an incredibly complex evolved machine. It tries to optimize processes to keep everything running smoothly. When we attempt to do a new task, it takes a lot of our attention, and thus, require a lot of brain power. Every time we repeat that task, our brain tries to optimize the process. If that task is repeated enough time, brain will create a fixed optimized algorithm to perform that task so that it doesn’t need to spend more energy in thinking. This fixed optimized algorithm is what we call a habit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Finding Light in Unpredictability</title>
       <link>https://romitheguru.github.io/posts/life/finding_hope_in_bad_times/</link>
       <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/life/finding_hope_in_bad_times/</guid>
-      <description>One of the most important facts to understand in life is that you don&amp;rsquo;t always get what you want. You can hope to achieve things in life. You can even work harder than others. However, there are factors beyond our control that will affect the overall outcome. Those factors play a significant role in our life.
-But why am I writing about this? I think, when life goes smoothly, we rarely question things.</description>
+      <description>&lt;p&gt;One of the most important facts to understand in life is that you don&amp;rsquo;t always get what you want. You can hope to achieve things in life. You can even work harder than others. However, there are factors beyond our control that will affect the overall outcome. Those factors play a significant role in our life.&lt;/p&gt;
+&lt;p&gt;But why am I writing about this? I think, when life goes smoothly, we rarely question things. We feel content, and everything seems to be going according to plan. Why worry at such a time, right? But as soon as things do not go according to our plan, then we realise the more realistic world around us. We suddenly see things from a philosophical angle.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why Should You Learn Mathematics for ML</title>
@@ -52,30 +53,32 @@ But why am I writing about this? I think, when life goes smoothly, we rarely que
       <link>https://romitheguru.github.io/posts/general/learning_through_summarisation/</link>
       <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/general/learning_through_summarisation/</guid>
-      <description>Today, the internet is flooded with information. It isn&amp;rsquo;t easy to keep up with everything happening in the field. However, to be successful you have to keep yourself informed. The problem is you can only read some things due to time constraints. So, it becomes crucial that whatever little time you spend in consuming information you make the best out of it. But how can you do that? How can you understand and retain most of the information that you read?</description>
+      <description>&lt;p&gt;Today, the internet is flooded with information. It isn&amp;rsquo;t easy to keep up with everything happening in the field. However, to be successful you have to keep yourself informed. The problem is you can only read some things due to time constraints. So, it becomes crucial that whatever little time you spend in consuming information you make the best out of it. But how can you do that? How can you understand and retain most of the information that you read? There’s a simple yet powerful technique that can help you gauge and improve your understanding: summarising content in your own words.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bias Variance Trade-off</title>
       <link>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/data_science/bias_variance_trade-off/</guid>
-      <description>The bias-variance trade-off is a fundamental concept in machine learning that refers to the trade-off between the ability of a model to fit the training data well (low bias) and its ability to generalize to new, unseen data (low variance). In other words, the bias-variance trade-off is the balance between the complexity and flexibility of a model, and its ability to make accurate predictions on both the training and testing datasets.</description>
+      <description>&lt;p&gt;The bias-variance trade-off is a fundamental concept in machine learning that refers to the trade-off between the ability of a model to fit the training data well (low bias) and its ability to generalize to new, unseen data (low variance). In other words, the bias-variance trade-off is the balance between the complexity and flexibility of a model, and its ability to make accurate predictions on both the training and testing datasets.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Step-by-Step Guide to Securing a Data Science Job</title>
       <link>https://romitheguru.github.io/posts/how_get_data_job/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/how_get_data_job/</guid>
-      <description>Data science is one of the fastest-growing and most exciting fields today. It offers a unique blend of challenge and reward, combining the analytical skills of a mathematician with the creativity of a software engineer, all while providing valuable insights for businesses. The field encompasses a variety of roles, including data scientist, data analyst, machine learning engineer, and AI engineer.
-For those new to the field, data science internships offer a valuable first step, providing hands-on experience with real-world data.</description>
+      <description>&lt;p&gt;Data science is one of the fastest-growing and most exciting fields today. It offers a unique blend of challenge and reward, combining the analytical skills of a mathematician with the creativity of a software engineer, all while providing valuable insights for businesses. The field encompasses a variety of roles, including data scientist, data analyst, machine learning engineer, and AI engineer.&lt;/p&gt;
+&lt;p&gt;For those new to the field, data science internships offer a valuable first step, providing hands-on experience with real-world data. If you already have industry experience, building a strong data science portfolio is crucial before applying for jobs. This article will guide you through the practical steps of creating a portfolio to help you land your dream data science job.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Find Insights in Data</title>
       <link>https://romitheguru.github.io/posts/how_find_insights/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/posts/how_find_insights/</guid>
-      <description>In today&amp;rsquo;s data-driven world, businesses hold a treasure trove of information. But simply having data isn&amp;rsquo;t enough. The true power lies in extracting valuable insights to inform better decision-making and fuel growth. This article will guide you through a strategic approach to uncover hidden gems within your data.
-What are Insights? Insights are not just random observations; they are previously unknown, actionable business trends or knowledge. They provide a deeper understanding of your customers, market dynamics, or internal operations, empowering you to take strategic actions.</description>
+      <description>&lt;!-- ![Example Image](img1.png#center) --&gt;
+&lt;p&gt;In today&amp;rsquo;s data-driven world, businesses hold a treasure trove of information. But simply having data isn&amp;rsquo;t enough. The true power lies in extracting valuable insights to inform better decision-making and fuel growth. This article will guide you through a strategic approach to uncover hidden gems within your data.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-insights&#34;&gt;What are Insights?&lt;/h2&gt;
+&lt;p&gt;Insights are not just random observations; they are previously unknown, actionable business trends or knowledge. They provide a deeper understanding of your customers, market dynamics, or internal operations, empowering you to take strategic actions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
