@@ -6,13 +6,27 @@
     <description>Recent content in Tags on Romee&#39;s Blog</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://romitheguru.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deep Learning</title>
       <link>https://romitheguru.github.io/tags/deep-learning/</link>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>https://romitheguru.github.io/tags/nlp/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transformers</title>
+      <link>https://romitheguru.github.io/tags/transformers/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/tags/transformers/</guid>
       <description></description>
     </item>
     <item>
@@ -20,13 +34,6 @@
       <link>https://romitheguru.github.io/tags/learning-path/</link>
       <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://romitheguru.github.io/tags/learning-path/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Transformers</title>
-      <link>https://romitheguru.github.io/tags/transformers/</link>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://romitheguru.github.io/tags/transformers/</guid>
       <description></description>
     </item>
     <item>

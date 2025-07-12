@@ -6,8 +6,17 @@
     <description>Recent content on Romee&#39;s Blog</description>
     <generator>Hugo -- 0.146.5</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://romitheguru.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From LSTMs to RLHF — How One Idea Ignites the Next</title>
+      <link>https://romitheguru.github.io/posts/deep_learning/nlp_progress/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://romitheguru.github.io/posts/deep_learning/nlp_progress/</guid>
+      <description>&lt;h2 id=&#34;innovation-as-a-relay-race&#34;&gt;Innovation as a Relay Race&lt;/h2&gt;
+&lt;p&gt;Every landmark in modern NLP began as a modest answer to a concrete limitation. One group publishes a clever fix, another notices the remaining crack, and a third discovers a shortcut the first two never imagined. LSTMs rescued RNNs from vanishing gradients; contextual embeddings made static vectors obsolete; transformers smashed the parallel-computing ceiling; instruction-tuned models closed the human-alignment gap.&lt;/p&gt;
+&lt;p&gt;Tracking that relay race is more instructive than memorising any single result: it shows why each breakthrough mattered and how the field’s centre of gravity kept shifting.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Logistic Regression to Transformers: Learning Path</title>
       <link>https://romitheguru.github.io/posts/deep_learning/learning_path/</link>
