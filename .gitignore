@@ -2,3 +2,6 @@
 .dropbox
 .DS_Store
 Icon*
+/public/
+/resources/
+/.hugo_build.lock

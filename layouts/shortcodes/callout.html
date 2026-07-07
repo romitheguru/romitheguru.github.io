@@ -1,0 +1,9 @@
+{{- $type := .Get "type" | default "note" -}}
+{{- $titles := dict "insight" "Insight" "mental-model" "Mental model" "takeaway" "Takeaway" "definition" "Definition" "note" "Note" "warning" "Warning" "common-mistake" "Common mistake" -}}
+<aside class="callout callout--{{ $type | urlize }}" role="{{ if eq $type "warning" }}alert{{ else }}note{{ end }}">
+  <div class="callout__marker" aria-hidden="true">{{ if eq $type "warning" }}!{{ else if eq $type "definition" }}Aa{{ else }}↳{{ end }}</div>
+  <div class="callout__body">
+    <p class="callout__title">{{ .Get "title" | default (index $titles $type) }}</p>
+    {{ .Inner | markdownify }}
+  </div>
+</aside>

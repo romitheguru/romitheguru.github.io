@@ -1,0 +1,19 @@
+{{- $toc := .TableOfContents -}}
+{{- $headings := findRE `<h[2-3][^>]*id=(?:"[^"]+"|[^ >]+)[^>]*>.*?</h[2-3]>` .Content -}}
+<details class="toc" {{ if .Param "TocOpen" }}open{{ end }}>
+  <summary accesskey="c" title="(Alt + C)"><span class="title">Table of Contents</span></summary>
+  <div class="inner">
+    {{- if and $toc (not (eq $toc `<nav id="TableOfContents"></nav>`)) }}
+      {{- $toc | safeHTML }}
+    {{- else if $headings }}
+    <nav id="TableOfContents"><ul>
+      {{- range $headings }}
+        {{- $id := replaceRE `(?s).*?id="?([^" >]+)"?.*` "$1" . -}}
+        {{- $heading := replaceRE `(?s)<a[^>]*>.*?</a>` "" . -}}
+        {{- $title := replaceRE `<[^>]+>` "" $heading | htmlUnescape -}}
+        <li><a href="#{{ $id }}">{{ $title }}</a></li>
+      {{- end }}
+    </ul></nav>
+    {{- end }}
+  </div>
+</details>

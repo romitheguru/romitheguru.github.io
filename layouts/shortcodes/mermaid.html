@@ -1,0 +1,5 @@
+{{- .Page.Store.Set "hasMermaid" true -}}
+<figure class="diagram">
+  <pre class="mermaid">{{ .Inner | htmlEscape | safeHTML }}</pre>
+  {{- with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

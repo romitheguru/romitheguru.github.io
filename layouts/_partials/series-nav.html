@@ -1,0 +1,19 @@
+{{- with index (.GetTerms "series") 0 -}}
+  {{- $current := $ -}}
+  {{- $pages := sort .Pages "Params.series_order" "asc" -}}
+  {{- $position := 0 -}}
+  {{- range $index, $page := $pages }}{{ if eq $page.RelPermalink $current.RelPermalink }}{{ $position = $index }}{{ end }}{{ end -}}
+  <nav class="series-nav" aria-label="Article series">
+    <div class="series-nav__header">
+      <div><span>Part {{ add $position 1 }} of {{ len $pages }}</span><h2>{{ .LinkTitle }}</h2></div>
+      <a href="{{ .RelPermalink }}">View series</a>
+    </div>
+    <div class="series-progress" aria-label="{{ add $position 1 }} of {{ len $pages }} articles">
+      {{- range $index, $_ := $pages }}<span class="{{ if le $index $position }}is-complete{{ end }}"></span>{{ end }}
+    </div>
+    <div class="series-nav__links">
+      {{- if gt $position 0 }}{{ with index $pages (sub $position 1) }}<a href="{{ .RelPermalink }}"><small>Previous</small>{{ .Title }}</a>{{ end }}{{ else }}<span></span>{{ end }}
+      {{- if lt (add $position 1) (len $pages) }}{{ with index $pages (add $position 1) }}<a class="next" href="{{ .RelPermalink }}"><small>Next</small>{{ .Title }}</a>{{ end }}{{ end }}
+    </div>
+  </nav>
+{{- end -}}

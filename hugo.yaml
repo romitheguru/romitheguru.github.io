@@ -1,0 +1,102 @@
+baseURL: "https://romitheguru.github.io/"
+languageCode: "en-us"
+title: "Romee Panchal"
+theme: "PaperMod"
+copyright: "© Romee Panchal"
+enableRobotsTXT: true
+enableGitInfo: false
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  tag: tags
+  series: series
+
+outputs:
+  home: [HTML, RSS, JSON]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  author: "Romee Panchal"
+  description: "Essays on AI, machine learning, engineering, and the ideas that shape how we build."
+  keywords: [AI, machine learning, engineering, data science, technical essays]
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  mainSections: [posts]
+  DateFormat: "January 2, 2006"
+  analytics:
+    google:
+      SiteVerificationTag: ""
+  label:
+    text: "Romee Panchal"
+    icon: "/logo.png"
+    iconHeight: 34
+  homeInfoParams:
+    Title: "Clear thinking about intelligent systems."
+    Content: "Essays on AI, machine learning, and engineering—written to help practitioners understand not just what works, but why."
+  socialIcons:
+    - name: x
+      url: "https://twitter.com/romitheguru"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/romeepanchal/"
+    - name: github
+      url: "https://github.com/romitheguru"
+    - name: rss
+      url: "/index.xml"
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: series
+      name: Series
+      url: /series/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 50
+
+services:
+  googleAnalytics:
+    ID: "G-86W3800S9B"
+
+privacy:
+  googleAnalytics:
+    respectDoNotTrack: true
+

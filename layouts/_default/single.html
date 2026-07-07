@@ -1,0 +1,60 @@
+{{- define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="article-labels">
+      {{- with index (.GetTerms "series") 0 }}<a class="series-label" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+    </div>
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- with .Params.summary }}<p class="post-description">{{ . }}</p>{{ end }}
+    <div class="post-meta">{{ partial "post_meta.html" . }}</div>
+  </header>
+
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+  {{- with .Params.keyInsight }}
+  <aside class="key-insight" aria-labelledby="key-insight-title">
+    <span class="callout-icon" aria-hidden="true">↳</span>
+    <div><h2 id="key-insight-title">Key insight</h2><p>{{ . }}</p></div>
+  </aside>
+  {{- end }}
+
+  <div class="article-layout">
+    {{- if (.Param "ShowToc") }}
+    <aside class="article-toc" aria-label="On this page">
+      <p class="article-toc__label">On this page</p>
+      {{- partial "toc.html" . }}
+    </aside>
+    {{- end }}
+    <div class="article-main">
+      {{- if .Content }}
+      <div class="post-content">
+        {{- if not (.Param "disableAnchoredHeadings") }}
+          {{- partial "anchored_headings.html" .Content -}}
+        {{- else }}{{ .Content }}{{ end }}
+      </div>
+      {{- end }}
+      {{- partial "series-nav.html" . }}
+      {{- partial "next-reading.html" . }}
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      {{- range (.GetTerms "tags") }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+    </ul>
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}{{ partial "share_icons.html" . }}{{ end }}
+  </footer>
+  {{- if in .RawContent "mermaid" }}
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.documentElement.dataset.theme === "dark" ? "dark" : "neutral",
+      securityLevel: "strict"
+    });
+  </script>
+  {{- end }}
+</article>
+{{- end }}

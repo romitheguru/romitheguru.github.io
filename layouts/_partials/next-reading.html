@@ -1,0 +1,34 @@
+{{- $current := . -}}
+{{- $recommendations := slice -}}
+{{- range .Params.next_reading -}}
+  {{- with site.GetPage . }}{{ $recommendations = $recommendations | append . }}{{ end -}}
+{{- end -}}
+{{- with index (.GetTerms "series") 0 -}}
+  {{- range sort .Pages "Params.series_order" "asc" -}}
+    {{- if and (ne .RelPermalink $current.RelPermalink) (not (in $recommendations .)) (lt (len $recommendations) 3) -}}
+      {{- $recommendations = $recommendations | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- range .GetTerms "tags" -}}
+  {{- range .Pages.ByDate.Reverse -}}
+    {{- if and (ne .RelPermalink $current.RelPermalink) (not (in $recommendations .)) (lt (len $recommendations) 3) -}}
+      {{- $recommendations = $recommendations | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $recommendations }}
+<section class="next-reading" aria-labelledby="next-reading-title">
+  <p class="section-kicker">Continue exploring</p>
+  <h2 id="next-reading-title">Next reading</h2>
+  <div class="next-reading__grid">
+    {{- range first 3 $recommendations }}
+    <a href="{{ .RelPermalink }}">
+      <span>Next reading</span>
+      <strong>{{ .Title }}</strong>
+      <small>{{ .ReadingTime }} min read <span aria-hidden="true">→</span></small>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

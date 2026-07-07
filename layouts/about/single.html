@@ -1,0 +1,22 @@
+{{- define "main" }}
+<article class="about-page">
+  <header class="about-hero">
+    {{ partial "breadcrumbs.html" . }}
+    <p class="section-kicker">About</p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.summary }}<p>{{ . }}</p>{{ end }}
+  </header>
+  <div class="about-panel">
+    <div class="about-panel__content post-content">
+      {{ .Content }}
+    </div>
+    <aside class="about-card" aria-label="Romee Panchal links">
+      <p class="about-card__label">Find me</p>
+      <a href="https://twitter.com/romitheguru">X / Twitter</a>
+      <a href="https://www.linkedin.com/in/romeepanchal/">LinkedIn</a>
+      <a href="https://github.com/romitheguru">GitHub</a>
+      <a href="https://romeepanchal.substack.com/">Newsletter</a>
+    </aside>
+  </div>
+</article>
+{{- end }}
