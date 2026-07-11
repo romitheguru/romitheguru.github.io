@@ -208,6 +208,12 @@ a {
   --chip-border: #e7a9b5;
 }
 
+.series-chip--ai-engineering {
+  --chip-fg: #315fbd;
+  --chip-bg: #e7efff;
+  --chip-border: #acc3f2;
+}
+
 [data-theme="dark"] .series-chip--modern-nlp {
   --chip-fg: #f0bb68;
   --chip-bg: #3c2a14;
@@ -236,6 +242,12 @@ a {
   --chip-fg: #f0a2b0;
   --chip-bg: #3a1d24;
   --chip-border: #753947;
+}
+
+[data-theme="dark"] .series-chip--ai-engineering {
+  --chip-fg: #9dbaff;
+  --chip-bg: #1b2a4a;
+  --chip-border: #405e9a;
 }
 
 .editorial-card .entry-header h2 {
