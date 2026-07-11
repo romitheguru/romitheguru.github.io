@@ -1,4 +1,4 @@
-baseURL: "https://romitheguru.github.io/"
+baseURL: "https://romeepanchal.com/"
 languageCode: "en-us"
 title: "Romee Panchal"
 theme: "PaperMod"
@@ -99,4 +99,3 @@ services:
 privacy:
   googleAnalytics:
     respectDoNotTrack: true
-
