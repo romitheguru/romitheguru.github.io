@@ -10,7 +10,7 @@ git submodule update --init --recursive
 hugo server -D
 ```
 
-Open `http://localhost:1313`.
+Open `http://localhost:1313` to preview locally.
 
 ## Writing
 
