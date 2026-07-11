@@ -18,7 +18,6 @@
 {{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome (eq $paginator.PageNumber 1) }}
-  {{- partial "home_info.html" . }}
   <div class="articles-heading">
     <div>
       <p class="section-kicker">Latest writing</p>

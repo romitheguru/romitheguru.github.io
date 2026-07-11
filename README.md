@@ -20,26 +20,8 @@ Create an article bundle with:
 hugo new content posts/my-article/index.md
 ```
 
-Every article should define `summary`, `keyInsight`, `difficulty`, `lastmod`,
-tags, and optional series metadata. Reusable callouts are available through:
-
-```md
-{{< callout type="insight" title="Why this matters" >}}
-Callout content.
-{{< /callout >}}
-```
-
-Supported callout types are `insight`, `mental-model`, `takeaway`, `definition`,
-`note`, `warning`, and `common-mistake`.
-
-Diagrams use Mermaid:
-
-```md
-{{< mermaid caption="Request flow" >}}
-flowchart LR
-  Browser --> API --> Model
-{{< /mermaid >}}
-```
+Every article should define `summary`, `lastmod`, tags, and optional series
+metadata.
 
 ## Deployment
 

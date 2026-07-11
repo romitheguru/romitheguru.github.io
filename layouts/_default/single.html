@@ -13,13 +13,6 @@
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
-  {{- with .Params.keyInsight }}
-  <aside class="key-insight" aria-labelledby="key-insight-title">
-    <span class="callout-icon" aria-hidden="true">↳</span>
-    <div><h2 id="key-insight-title">Key insight</h2><p>{{ . }}</p></div>
-  </aside>
-  {{- end }}
-
   <div class="article-layout">
     {{- if (.Param "ShowToc") }}
     <aside class="article-toc" aria-label="On this page">
