@@ -7,7 +7,7 @@ tags: ["AI Engineering", "Machine Learning", "Product Thinking"]
 summary: "A practical look at why impressive AI prototypes often fail in production, and how to reason about the gap between a demo and a dependable system."
 keyInsight: "A demo proves that a model can work once. A product must prove that the system keeps working when inputs, users, costs, and expectations change."
 difficulty: "intermediate"
-series: ["Practical Data Science"]
+series: ["AI Engineering"]
 series_order: 1
 showToc: true
 TocOpen: true
@@ -17,194 +17,109 @@ ShowBreadCrumbs: true
 ShowCodeCopyButtons: true
 ---
 
-AI projects often look most convincing at the exact moment when they are least understood.
+Here's a pattern I keep seeing: an AI project looks most impressive right before anyone really understands it.
 
-A demo is usually built around a clean story: one input, one output, one impressive moment. The model summarizes a document, answers a question, extracts fields from a PDF, writes code, or classifies a customer ticket. Everyone in the room sees the possibility immediately.
+The demo has one job — make people believe. One input, one output, one "wow" moment. Feed it a messy PDF, watch it spit out clean data. Ask it a question, get a smart answer. Everyone in the room leans in.
 
-Then the project moves closer to production and the confidence starts leaking.
+Then someone tries to ship it. And the cracks show up fast.
 
-The same model misses obvious cases. Latency becomes uncomfortable. The prompt that worked yesterday behaves differently today. Users ask questions outside the happy path. Evaluation turns into a debate. The team realizes that the hard part was not getting the model to respond. The hard part was deciding what dependable means.
+![A workflow showing the path from impressive demo to production: define the workflow, map failure modes, build an evaluation set, design human review, and ship with monitoring.](Why%20AI%20Projects%20Fail%20After%20the%20Demo.png)
 
-This is the gap between a demo and a system.
+## What actually happens after the demo
 
-## A Demo Optimizes for Belief
+Say you built a bot that reads invoices and pulls out the total, vendor, and due date. In the demo, you tested it on ten clean PDFs. It nailed all ten.
 
-A demo has one main job: make people believe the idea is possible.
+Three weeks later, in production:
 
-That is useful. Many good products start as demos because a rough prototype gives the team something concrete to react to. Abstract conversations about AI are usually vague. A demo makes the idea visible.
+- A scanned invoice comes in sideways. The model reads the total as $0.
+- Two vendors use the same layout but different currency symbols. It picks USD both times.
+- Someone emails a screenshot instead of a PDF. The pipeline chokes.
+- The finance team starts double-checking every output — which defeats the point of automating it.
 
-But demos also hide complexity by design. They usually answer questions like:
+Nothing here means the model is bad. It means the demo never tested for reality. A demo answers "can this work once?" Production asks "how often does this fail, and what happens when it does?" Those are different questions, and only one of them tells you if you have a product.
 
-- Can this model perform the task at least once?
-- Does the output feel impressive?
-- Can stakeholders imagine the product?
-- Is the direction worth exploring?
+## Stop treating the model as the whole product
 
-Those are not production questions. They are discovery questions.
+It's easy to think the model *is* the product. It isn't. It's one part sitting inside a bigger workflow — and the workflow is what the user actually experiences.
 
-Production asks something less glamorous:
+Take a support-ticket triage system. Say the model correctly labels tickets 90% of the time. Sounds great. But the product still falls apart if:
 
-- How often does it fail?
-- Which failures are acceptable?
-- How quickly can we detect bad outputs?
-- What happens when the input is messy?
-- What does it cost at scale?
-- Who is accountable when the answer is wrong?
+- Nobody set a confidence threshold, so uncertain guesses get treated the same as sure ones.
+- There's no way to route a low-confidence ticket to a human.
+- Agents can't correct a wrong label in two clicks — so they just work around the tool.
+- Nobody's watching whether ticket topics have shifted since last month.
 
-The mistake is treating belief as evidence. A good demo earns attention. It does not earn trust.
+None of that is a "the model needs to be smarter" problem. It's a workflow that was never designed to handle the model being wrong sometimes — which it will be.
 
-## The Real Unit Is the Workflow, Not the Model
+So before picking a model, ask a more boring question: **what decision is this actually supposed to improve?** If you can't answer that clearly, you'll end up tweaking prompts and comparing benchmarks forever, with no way to know if any of it matters.
 
-Teams often talk about AI projects as if the model is the product.
+## Write down how it will fail — before it does
 
-In practice, the model is only one component inside a workflow. The user has a goal before the model is called, and they still have a goal after the model responds. If the surrounding workflow is weak, even a strong model feels unreliable.
+Normal software fails loudly. A button does nothing. A page 404s. You know something's wrong immediately.
 
-Consider a support-ticket triage system. The model might classify tickets correctly most of the time. But the product still fails if:
+AI fails quietly. It gives you a confident, fluent, completely wrong answer — and it can look identical to a correct one. That's the dangerous part.
 
-- The categories are unclear.
-- The confidence score is not used.
-- Low-confidence tickets are not routed to humans.
-- Users cannot correct the prediction.
-- Corrections are never fed back into the system.
-- The operations team does not know when the distribution changes.
+So before launch, sit down and actually list the ways this can go wrong. For the invoice bot, that table might look like:
 
-None of these are model-quality problems in isolation. They are system-design problems.
+| What breaks | What it looks like | Why it matters | What you do about it |
+|---|---|---|---|
+| Wrong number pulled | $450 read as $4,500 | Someone gets overpaid | Flag anything above a threshold for human check |
+| Bad scan quality | Blurry or rotated PDF | Missing data, silent failure | Reject it with a clear message instead of guessing |
+| Made-up detail | Invents a PO number that doesn't exist | Breaks trust in the whole tool | Cross-check against known records before accepting |
+| Unclear request | Invoice in a format you've never seen | Garbage output | Route to a human, don't force an answer |
+| Cost creep | Someone uploads a 200-page contract | Surprise API bill | Cap file size, batch large jobs |
 
-This is why model selection is rarely the first question I would ask. I would start with:
+This isn't paperwork for its own sake — it's the actual design work. Skip it, and you'll discover these failure modes one angry customer at a time, which is the most expensive way to learn anything.
 
-> What decision is this system supposed to improve?
+## Test it before you trust it
 
-If the answer is unclear, the project will drift. The team will optimize prompts, compare models, and debate metrics without knowing what good behavior looks like inside the actual business process.
+A lot of teams build the thing, eyeball a handful of outputs, decide it "seems good," and ship. Then six weeks later nobody can say whether the last change made things better or worse.
 
-## Failure Modes Are Product Requirements
+Build a test set *before* you polish anything. It doesn't need to be huge — even 30-50 well-chosen examples beats zero. What matters is that it's honest, not flattering. For the invoice bot, that means including:
 
-Every AI system has failure modes. The difference between a toy and a serious system is whether those failure modes are named.
+- A few clean, easy invoices (the happy path — but not the *only* path)
+- A blurry scan
+- An invoice missing a due date entirely
+- One in a foreign currency
+- One where the answer genuinely isn't in the document
 
-For a normal software feature, we usually know what failure looks like. A payment fails. A button does nothing. A file does not upload. The bug may be hard to fix, but the incorrect behavior is visible.
+Run every model or prompt change against this same set. Now you can actually see if you're improving or just moving the errors around.
 
-AI failures are slipperier. The system can produce an answer that is fluent, plausible, and wrong. It can be partially correct in a way that misleads the user more than a clear error would. It can fail differently across domains, accents, formats, document types, or user expectations.
+## Human review isn't a failure — it's often the whole point
 
-That means failure analysis must become part of the design process.
+There's a real temptation to chase "fully automated" because it sounds more impressive. But full automation is rarely the right first goal. Often the better outcome is: the AI does the boring 80%, and a person handles the judgment calls.
 
-Before production, I would want a table like this:
+The question isn't "can we remove the human?" It's "where does a human's judgment actually matter most?"
 
-| Failure mode | Example | Impact | Mitigation |
-| --- | --- | --- | --- |
-| Wrong extraction | Incorrect invoice amount | Financial error | Human review above threshold |
-| Unsupported input | Scanned document with poor quality | Missing data | Reject with clear reason |
-| Confident hallucination | Fake policy citation | Loss of trust | Retrieval grounding and citation checks |
-| Ambiguous intent | User asks broad question | Irrelevant answer | Clarifying question |
-| Cost spike | Long documents submitted repeatedly | Budget risk | Token limits and batching |
+Sometimes that means: the model handles easy cases and hands off anything uncertain. Sometimes it means the model drafts a reply and a person hits approve. Sometimes the model just gathers the evidence and a human still makes the call. None of these are compromises — they're often what makes people actually trust and use the tool.
 
-This table is not bureaucracy. It is product thinking.
+## Things will change under you — plan for that
 
-When teams skip this step, they end up discovering requirements through incidents. That is the most expensive way to learn.
+Even a system that works well on day one will drift. Users find new ways to use it. Document formats change. The vendor updates the underlying model without asking you. What counted as a normal request in January might be rare by June.
 
-## Evaluation Cannot Be an Afterthought
+So don't just watch if the system is *running*. Watch if it's still *useful*:
 
-Many AI projects fail because evaluation begins too late.
+- How much is it costing per request, and is that changing?
+- How often are people overriding or rejecting its output?
+- Are the inputs it's seeing starting to look different from what you tested?
+- Is it quietly getting slower?
 
-The team builds the prototype, improves the prompt, tests a few examples manually, and only then asks, "How do we measure whether this works?"
+Uptime monitoring tells you the lights are on. None of that tells you whether the thing is still doing its job.
 
-That order is backwards.
+## The better question to ask before you build anything
 
-Evaluation should be designed as soon as the task is understood. Even a small evaluation set changes the conversation. It forces the team to define what they value:
+Don't ask "can we use AI for this?" That question makes every idea sound viable.
 
-- Accuracy or usefulness?
-- Completeness or precision?
-- Speed or depth?
-- Consistency or creativity?
-- Automation or assistive review?
+Ask instead: **what decision or bottleneck are we actually trying to fix, and how wrong can this system be before it stops being worth it?**
 
-For technical teams, this is where the work becomes concrete. You need examples that represent reality, not just the happy path. You need expected outputs or grading criteria. You need slices: easy cases, hard cases, edge cases, high-risk cases.
+That single reframe forces the real questions to show up early — what counts as success, what failure looks like, who reviews the edge cases, what you're tracking after launch. Here's a quick gut-check before you take any demo seriously:
 
-A useful evaluation set does not need to be large at the start. It needs to be honest.
-
-For example, if you are building a document-question-answering system, include:
-
-- Clean documents.
-- Messy scans.
-- Documents with missing information.
-- Questions that cannot be answered from the document.
-- Questions where the answer is spread across sections.
-- Questions where a wrong answer would cause real harm.
-
-Then track model changes against those cases. Without this, every improvement is just a feeling.
-
-## Human Review Is Not a Weakness
-
-There is a common pressure in AI projects to maximize automation.
-
-That pressure is understandable. Automation is easy to sell. But full automation is not always the best first target. In many domains, the better goal is decision support: reduce the human workload, improve consistency, and make review faster.
-
-Human review is not a failure of AI. It is often the control layer that makes AI usable.
-
-The important question is not "Can we remove the human?" It is:
-
-> Where does human judgment create the most leverage?
-
-Sometimes the model should handle easy cases and escalate uncertain ones. Sometimes it should draft an answer but require approval. Sometimes it should retrieve evidence but let the user decide. Sometimes it should only summarize options.
-
-This design is less flashy than full automation, but it is usually how trustworthy systems enter real workflows.
-
-## Production Is Mostly About Drift
-
-Even if the model works well today, the environment will change.
-
-Users will learn how to interact with the system. Documents will change format. Business rules will change. New products will be launched. Edge cases will become common. Costs will shift. The model provider may update behavior. The data distribution will move.
-
-This is why AI systems need monitoring beyond uptime.
-
-At minimum, I would want to watch:
-
-- Input volume.
-- Latency.
-- Cost per request.
-- Rejection or escalation rate.
-- User correction rate.
-- Output quality on sampled cases.
-- Common unsupported requests.
-- Distribution changes in input types.
-
-Traditional software monitoring tells you whether the system is running. AI monitoring should tell you whether the system is still useful.
-
-Those are different questions.
-
-## A Better Way to Frame AI Projects
-
-The simplest way to avoid demo-driven failure is to change the framing.
-
-Do not ask:
-
-> Can we use AI for this?
-
-Ask:
-
-> What decision, workflow, or bottleneck are we trying to improve, and what level of uncertainty can the system tolerate?
-
-That framing changes the project immediately. It connects the model to a user need. It makes evaluation necessary. It makes failure modes visible. It makes human review a design choice instead of an embarrassment.
-
-Here is the checklist I would use before taking an AI demo seriously:
-
-- The target workflow is clearly defined.
-- The user decision is explicit.
-- Success and failure are written down.
-- There is an evaluation set with realistic examples.
-- Edge cases are included, not avoided.
-- The system has a fallback path.
-- Human review is designed where needed.
-- Cost and latency are measured.
-- Monitoring is planned before launch.
-- The team knows who owns quality after deployment.
-
-If these points are missing, the demo may still be useful. It is just not ready to become a product.
-
-## Conclusion
-
-The most important lesson is that AI products do not fail because the demo was fake. They fail because the demo was incomplete.
-
-It showed capability, but not reliability. It showed possibility, but not operations. It showed the model, but not the workflow around the model.
-
-Good AI engineering is the work of closing that gap.
-
-The model matters. But the system matters more.
+- Can you say, in one sentence, what decision this improves?
+- Do you know what a bad output looks like, specifically?
+- Do you have a test set with real, messy examples — not just the easy ones?
+- Is there a fallback when the model doesn't know?
+- Have you decided where a human needs to be in the loop?
+- Do you know what this costs and how fast it responds, under real load?
+- Is someone actually going to watch this after it ships?
+
+If most of those are blank, that's fine — it just means you have a good demo, not a product yet. The gap between the two isn't more AI. It's the unglamorous work of deciding what "reliable" actually means, and building the workflow around the model instead of just trusting the model itself.
