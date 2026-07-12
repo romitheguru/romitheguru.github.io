@@ -494,6 +494,97 @@ body:has(.post-single) .main {
   font-family: var(--mono);
 }
 
+.post-content .highlight {
+  margin: 1.8rem 0;
+  border: 1px solid #2d3a35;
+  border-radius: 10px;
+  background: #0d1512;
+  box-shadow: 0 18px 40px rgba(23, 33, 29, 0.16);
+  overflow: hidden;
+}
+
+.post-content .highlight pre.chroma,
+.post-content .highlight pre {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  color: #d7e2dc;
+  background: #0d1512 !important;
+  overflow-x: auto;
+}
+
+.post-content .highlight code {
+  color: inherit;
+  background: transparent;
+}
+
+.post-content .highlight .chroma {
+  color: #d7e2dc;
+  background: #0d1512 !important;
+}
+
+.post-content .highlight .line {
+  min-height: 1.5em;
+}
+
+.post-content .highlight .k,
+.post-content .highlight .kc,
+.post-content .highlight .kd,
+.post-content .highlight .kn,
+.post-content .highlight .kp,
+.post-content .highlight .kr,
+.post-content .highlight .kt {
+  color: #f2b36d;
+}
+
+.post-content .highlight .nf,
+.post-content .highlight .nc,
+.post-content .highlight .na,
+.post-content .highlight .nd {
+  color: #8fd3ff;
+}
+
+.post-content .highlight .s,
+.post-content .highlight .s1,
+.post-content .highlight .s2,
+.post-content .highlight .sb,
+.post-content .highlight .sc,
+.post-content .highlight .sd,
+.post-content .highlight .se,
+.post-content .highlight .sh,
+.post-content .highlight .si,
+.post-content .highlight .sr,
+.post-content .highlight .ss {
+  color: #a8d88d;
+}
+
+.post-content .highlight .c,
+.post-content .highlight .c1,
+.post-content .highlight .cm,
+.post-content .highlight .cp,
+.post-content .highlight .cs {
+  color: #7f9189;
+}
+
+.post-content .highlight .m,
+.post-content .highlight .mi,
+.post-content .highlight .mf,
+.post-content .highlight .mh,
+.post-content .highlight .mo,
+.post-content .highlight .il {
+  color: #f59f85;
+}
+
+.post-content .highlight .o,
+.post-content .highlight .ow,
+.post-content .highlight .nb,
+.post-content .highlight .bp {
+  color: #8bdacb;
+}
+
+.post-content .highlight .err {
+  color: #ff8fa3;
+}
+
 .post-content table {
   font-family: var(--sans);
   font-size: 0.86rem;

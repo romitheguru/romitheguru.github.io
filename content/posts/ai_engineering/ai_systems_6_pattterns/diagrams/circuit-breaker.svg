@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="480" viewBox="0 0 820 480" role="img" aria-labelledby="title desc">
+<title id="title">Circuit Breaker</title>
+<desc id="desc">Stop cascading failures by failing fast during service degradation</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#d94f35"/></marker>
+  <filter id="soft"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#17211d" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" rx="18" fill="#fffdf8" stroke="#d8d0c2"/>
+<g filter="url(#soft)">
+<text x="34" y="40" font-family="Avenir Next, Inter, sans-serif" font-size="20" font-weight="800" fill="#17211d">Circuit Breaker</text>
+<text x="34" y="66" font-family="Avenir Next, Inter, sans-serif" font-size="13" font-weight="600" fill="#5e655f">Stop cascading failures by failing fast during service degradation</text>
+<rect x="80" y="170" width="180" height="80" rx="14" fill="#28715f" stroke="#17211d" stroke-width="2"/>
+<text x="170.0" y="200.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">CLOSED</text>
+<text x="170.0" y="219.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">normal</text>
+<rect x="570" y="170" width="180" height="80" rx="14" fill="#d94f35" stroke="#17211d" stroke-width="2"/>
+<text x="660.0" y="200.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">OPEN</text>
+<text x="660.0" y="219.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">fast fail</text>
+<rect x="320" y="340" width="200" height="80" rx="14" fill="#c9912f" stroke="#17211d" stroke-width="2"/>
+<text x="420.0" y="370.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">HALF-OPEN</text>
+<text x="420.0" y="389.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="15" font-weight="600" fill="#17211d">probe</text>
+<line x1="260" y1="210" x2="570" y2="210" stroke="#d94f35" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="357.0" y="195.0" width="116" height="26" rx="13" fill="#fffdf8" opacity="0.92"/>
+<text x="415.0" y="200.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="12" font-weight="700" fill="#d94f35">failures &gt;</text>
+<text x="415.0" y="219.5" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="12" font-weight="700" fill="#d94f35">threshold</text>
+<line x1="660" y1="250" x2="420" y2="340" stroke="#d94f35" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="482.0" y="280.0" width="116" height="26" rx="13" fill="#fffdf8" opacity="0.92"/>
+<text x="540.0" y="295.0" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="12" font-weight="700" fill="#d94f35">after timeout</text>
+<line x1="320" y1="380" x2="170" y2="250" stroke="#d94f35" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="187.0" y="300.0" width="116" height="26" rx="13" fill="#fffdf8" opacity="0.92"/>
+<text x="245.0" y="315.0" text-anchor="middle" dominant-baseline="middle" font-family="Avenir Next, Inter, sans-serif" font-size="12" font-weight="700" fill="#d94f35">success</text>
+</g>
+</svg>
